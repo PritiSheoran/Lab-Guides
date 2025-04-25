@@ -83,7 +83,7 @@ An Azure virtual machine (VM) is a computing resource provided by Microsoft Azur
 
   ![Networking](Networking.png)
 
-- Leave the remaining as default and then click on the **Review + create** at the buttom of the page. 
+- Click on the **Review + create** at the buttom of the page. 
 - Click **Create (1)** to start the deployment.
 
   ![Review + Create](Review+Create.png)
