@@ -19,7 +19,7 @@ An Azure virtual machine (VM) is a computing resource provided by Microsoft Azur
 
   ![VMSearch](Search.png)
 
-- Click on **+Create(1)**, choose **Azure Virtual Machine(2)**.
+- Click on **+Create (1)**, choose **Azure Virtual Machine (2)**.
  
   ![VMSearch](Create.png)
 
