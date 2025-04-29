@@ -68,7 +68,7 @@ In this task, we will create a new web app that runs a Docker container.
 
 ## Task 2: Test the Web App
 
- 1.  Now, you will be redirected to the newly created web app's page, Copy the **default domain** URL 
+ 1.  Now, you will be redirected to the newly created web app's page, Copy the **default domain (1)** URL 
 
      ![Domain](Domain.png)  
 
