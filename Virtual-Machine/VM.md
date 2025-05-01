@@ -15,102 +15,104 @@ An Azure virtual machine (VM) is a computing resource provided by Microsoft Azur
 
 ## Task 1 : Create a Virtual Machine
 
-- Go to **Azure Portal** in search bar search for **Virtual Machine(1)** and select **Virtual Machine(2)**.
+1. Go to **Azure Portal** in search bar search for **Virtual Machine(1)** and select **Virtual Machine(2)**.
 
-  ![VMSearch](Search.png)
+   ![VMSearch](Search.png)
 
-- Click on **+Create (1)**, choose **Azure Virtual Machine (2)**.
+2. Click on **+Create (1)**, choose **Azure Virtual Machine (2)**.
  
-  ![VMSearch](Create.png)
+   ![VMSearch](Create.png)
 
-- In **Basics** tab, add the following information and click on **Next: Disks > (14)**
-
-
-  | **Settings**                     | **Values**                                               |
-  |----------------------------------|----------------------------------------------------------|
-  | Subscription                    | **Accept default subscription (1)**                       |
-  | Resource group                  | **priti (2)**                                             |
+3. In **Basics** tab, add the following information and click on **Next: Disks > (14)**
 
 
-  ![Basics Tab](Basic1.png)
+   | **Settings**                     | **Values**                                               |
+   |----------------------------------|----------------------------------------------------------|
+   | Subscription                    | **Accept default subscription (1)**                       |
+   | Resource group                  | **priti (2)**                                             |
 
-  | **Settings**                    | **Values**                                                |
-  |---------------------------------|-----------------------------------------------------------|
-  | Virtual machine name            | **MD-VM (3)**                                             |
-  | Region                          | **West US 2 (4)**                                         |
-  | Availability options            | **No infrastructure redundancy required (5)**             |
-  | Security Type                   | **Standard (6)**                                          |
-  | Image                           | **Windows Server 2019 Datacenter - x64 Gen2 (7)**         |
 
-  ![Basics Tab](Basic2.png)
+   ![Basics Tab](Basic1.png)
 
-  | **Settings**                    | **Values**                                                |
-  |---------------------------------|-----------------------------------------------------------|
-  | Size                            | **Standard B2s (8)**                                      |
-  | Username                        | **priti (9)**                                             |
-  | Password                        | **March@123456 (10)**                                     |
-  | Co nfirm Password                | **March@123456 (11)**                                    |
+   | **Settings**                    | **Values**                                                |
+   |---------------------------------|-----------------------------------------------------------|
+   | Virtual machine name            | **MD-VM (3)**                                             |
+   | Region                          | **West US 2 (4)**                                         |
+   | Availability options            | **No infrastructure redundancy required (5)**             |
+   | Security Type                   | **Standard (6)**                                          |
+   | Image                           | **Windows Server 2019 Datacenter - x64 Gen2 (7)**         |
+
+   ![Basics Tab](Basic2.png)
+
+   | **Settings**                    | **Values**                                                |
+   |---------------------------------|-----------------------------------------------------------|
+   | Size                            | **Standard B2s (8)**                                      |
+   | Username                        | **priti (9)**                                             |
+   | Password                        | **March@123456 (10)**                                     |
+   | Co nfirm Password                | **March@123456 (11)**                                    |
  
-  ![Basics Tab](Basic3.png)
+   ![Basics Tab](Basic3.png)
 
-  | **Settings**                    | **Values**                                                |
-  |---------------------------------|-----------------------------------------------------------|
-  | Public inbound ports            | **Allow selected ports (12)**                             |
-  | Select inbound ports            | **RDP(3389) (13)**                                        |
+   | **Settings**                    | **Values**                                                |
+   |---------------------------------|-----------------------------------------------------------|
+   | Public inbound ports            | **Allow selected ports (12)**                             |
+   | Select inbound ports            | **RDP(3389) (13)**                                        |
 
-  ![Basics Tab](Basic4.png)
+   ![Basics Tab](Basic4.png)
   
 
-- In **Disk** Tab, choose the following values and click **next: Networking (4)**
+4. In **Disk** Tab, choose the following values and click **next: Networking (4)**
 
-  | **Settings**                     | **Values**                                                |
-  |----------------------------------|-----------------------------------------------------------|
-  | OS disk size                     | **Image default (127 GiB) (1)**                           |
-  | OS disk type                     | **Standard SSD (locally-redundant storage) (2)**          |
-  | Key management                   | **Platform managed key  (3)**                             |
-
-
-  ![Disk](OSDisk.png)
+   | **Settings**                     | **Values**                                                |
+   |----------------------------------|-----------------------------------------------------------|
+   | OS disk size                     | **Image default (127 GiB) (1)**                           |
+   | OS disk type                     | **Standard SSD (locally-redundant storage) (2)**          |
+   | Key management                   | **Platform managed key  (3)**                             |
 
 
-- In **Networking** tab, check the following values, leave everything as default and click **Next: Management (4)**
-
-  | **Settings**                                     | **Values**                                         |
-  |--------------------------------------------------|----------------------------------------------------|
-  | Public inbound ports                             | **Allow selected ports (1)**                       |
-  | Select inbound ports                             | **RDP(3389) (2)**                                  |
-  | Delete public IP and NIC when VM is deleted      | **Enable (3)**                                     |
-
-  ![Networking](Networking.png)
-
-- Click on the **Review + create** at the buttom of the page. 
-- Click **Create (1)** to start the deployment.
-
-  ![Review + Create](Review+Create.png)
+   ![Disk](OSDisk.png)
 
 
-- Wait a few minutes while Azure sets up your Virtual Machine. Click on the **Go to resource (1)** option.
+5. In **Networking** tab, check the following values, leave everything as default and click **Next: Management (4)**
 
-  ![Deployment Progress](Deploymnet.png)
+   | **Settings**                                     | **Values**                                         |
+   |--------------------------------------------------|----------------------------------------------------|
+   | Public inbound ports                             | **Allow selected ports (1)**                       |
+   | Select inbound ports                             | **RDP(3389) (2)**                                  |
+   | Delete public IP and NIC when VM is deleted      | **Enable (3)**                                     |
+
+   ![Networking](Networking.png)
+
+6. Click on the **Review + create** at the buttom of the page.
+   
+8. Click **Create (1)** to start the deployment.
+
+   ![Review + Create](Review+Create.png)
+
+
+9. Wait a few minutes while Azure sets up your Virtual Machine. Click on the **Go to resource (1)** option.
+
+   ![Deployment Progress](Deploymnet.png)
 
 
 ## Task 2: Connect to Virtual Machine
 
 Once deployed:
 
-- Now, you will be redirected to the newly created virtual machine's page. Click **Connect (1)** and choose **Connect (2)**
+1. Now, you will be redirected to the newly created virtual machine's page. Click **Connect (1)** and choose **Connect (2)**
 
-  ![Connect](Connect.png)
+   ![Connect](Connect.png)
 
-- Click **Connect > RDP** and **download the RDP file (1)** and open it.
+2. Click **Connect > RDP** and **download the RDP file (1)** and open it.
 
-  ![RDP](RDP.png)
+   ![RDP](RDP.png)
 
-- **Open the downloaded RDP file** and click **Connect (1)** when prompted.
+3. **Open the downloaded RDP file** and click **Connect (1)** when prompted.
 
-  ![RDP](Prompt.png) 
+   ![RDP](Prompt.png) 
 
-- Select **More choices (1)** option, choose **Use a different account (2)** enter your credentials Username: **.\priti (3)** and password: **March@123456 (4)**. 
-- Click **ok(6)** you should be able to connect to VM successfully.
+4. Select **More choices (1)** option, choose **Use a different account (2)** enter your credentials Username: **.\priti (3)** and password: **March@123456 (4)**.
+    
+5. Click **ok(6)** you should be able to connect to VM successfully.
 
-  ![RDP](Credentials.png)
+   ![RDP](Credentials.png)
