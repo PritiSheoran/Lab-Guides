@@ -89,11 +89,15 @@ Azure Functions is a serverless solution that allows you to write less code, mai
   
 9. On the BlobTrigger1 > Code + Test, review the auto-generated code and note that the code is designed to run an Blob request and log information.
 
-  ![Function](Log.png)
+  ![Logs](Log.png)
  
-  ![Function](EV.png)
- 
-  ![Einvironment](Env.png)
+10. If you don't get the trigger in logs, then navigate to integration inside the function and check the **storage account connection**.
+
+11. If not connected, set the environmnet variables.
+
+  ![Environment](EV.png)
+  
+  ![Environment](Env.png)
  
   ![Finsl](Final.png)
 
