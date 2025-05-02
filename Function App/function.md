@@ -114,9 +114,7 @@ Azure Functions is a serverless solution that allows you to write less code, mai
    
     ![Set Environment Variable](Env.png)
     
-17. To add the environment click **Apply(1)**.
-
-
+17. To add the environment click **Apply**.
     
 16. Now, upload an image inside the blob container and **it will trigger the Blob name and size (1)**. 
  
