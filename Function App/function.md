@@ -45,7 +45,7 @@ Azure Functions is a serverless solution that allows you to write less code, mai
 
 7. Wait a few minutes while Azure sets up your Function App. Click on the **Go to resource(1)** option.
 
-   ![AppS](Resource.png)
+   ![Resource](Resource.png)
    
 9. Navigate to **Storage Account** page, form the **Data Storage(1)** select **Container**.  
     
@@ -53,7 +53,7 @@ Azure Functions is a serverless solution that allows you to write less code, mai
 
 10. On the container page, select ** + Container(1)** to create a new container.
 
-    ![AppS](CC.png)
+    ![Container](CC.png)
 
 11. Create a **New Container** and click **Create(2)**.
     
@@ -61,13 +61,13 @@ Azure Functions is a serverless solution that allows you to write less code, mai
     |---------------------------------|----------------------------------------------------------|
     | Name                            |  **Provide a unique name (1)**                           |
 
-    ![AppS](New.png)    
+    ![New Container](New.png)    
    
 ## Task 2: Create a Blob triggered function 
 
 1. On the **Overview(1)**, click **Create function(2)**.
 
-   ![AppS](Function.png)
+   ![Function](Function.png)
    
 3. On the Select a template tab of the **Create function**, click on the **Blob trigger(1)** option and then click on **Next(2)**.
 
@@ -85,21 +85,35 @@ Azure Functions is a serverless solution that allows you to write less code, mai
     
 7. Navigate to Storage account, Upload an image inside you Container.
 
-  ![Function](Upload.png)
+   ![Upload](Upload.png)
   
 9. On the BlobTrigger1 > Code + Test, review the auto-generated code and note that the code is designed to run an Blob request and log information.
 
-  ![Logs](Log.png)
+   ![Logs](Log.png)
  
 10. If you don't get the trigger in logs, then navigate to integration inside the function and check the **storage account connection**.
 
-11. If not connected, set the environmnet variables.
+11. If not connected, we need to set the environmnet variables.
+12. Navigate to the **storage account** > **security+ networking (1)** > **Access Keys (2)**, under Key1, copy the **connection string(3)**.
 
-  ![Environment](EV.png)
-  
-  ![Environment](Env.png)
+    ![Access](Access.png)
+
+13. On the function app page, select **Environment Variable (1)** and click **+ Add (2)** to add the environment variable. 
+
+    ![Navigate to Environment](Variable.png)  
+
+14. Create an environment varable by adding the following information.
+    
+    | **Settings**                    | **Values**                                                            |
+    |---------------------------------|-----------------------------------------------------------------------|
+    | Name                            |  **add the storage account name**                                     |
+    | Value                           |  **Paste the copied connection string (2)** fron step (12)            |
+   
+    ![Set Environment Variable](Env.png)
+
+15. Now, upload an image inside the blob container and **it will trigger the Blob name and size**. 
  
-  ![Finsl](Final.png)
+    ![Final](Final.png)
 
    
 
