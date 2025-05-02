@@ -47,11 +47,11 @@ Azure Functions is a serverless solution that allows you to write less code, mai
 
    ![Resource](Resource.png)
    
-9. Navigate to **Storage Account** page, form the **Data Storage(1)** select **Container**.  
+9. Navigate to **Storage Account** page, form the **Data Storage(1)** select **Container (2)**.  
     
    ![AppS](Container.png)
 
-10. On the container page, select ** + Container(1)** to create a new container.
+10. On the container page, select **+ Container(1)** to create a new container.
 
     ![Container](CC.png)
 
@@ -83,17 +83,17 @@ Azure Functions is a serverless solution that allows you to write less code, mai
 
    ![Function](Function3.png)
     
-7. Navigate to Storage account, Upload an image inside you Container.
+7. Navigate to Storage account, select **Upload (1)**, **browse for files (2)** and enter **Upload**.
 
    ![Upload](Upload.png)
   
-9. On the BlobTrigger1 > Code + Test, review the auto-generated code and note that the code is designed to run an Blob request and log information.
+9. On the BlobTrigger1 > Code + Test, review the auto-generated code and note that the code is designed to run an Blob request and **log (1)** information.
 
    ![Logs](Log.png)
  
-10. If you don't get the trigger in logs, then navigate to integration inside the function and check the **storage account connection**.
+10. If you don't get the trigger in logs, then navigate to **integration (1)** inside the function **Azure blob storage (myblob)(2)** and check the **storage account connection (3)**.
 
-    ![Hosting](Integration.png)
+    ![Integration](Integration.png)
 
 11. If not connected, we need to set the environmnet variables.
     
@@ -105,7 +105,7 @@ Azure Functions is a serverless solution that allows you to write less code, mai
 
     ![Navigate to Environment](Variable.png)  
 
-15. Create an environment varable by adding the following information.
+15. Create an environment varable by adding the following information and click **Apply (3)**
     
     | **Settings**                    | **Values**                                                            |
     |---------------------------------|-----------------------------------------------------------------------|
@@ -113,8 +113,12 @@ Azure Functions is a serverless solution that allows you to write less code, mai
     | Value                           |  **Paste the copied connection string (2)** fron step (12)            |
    
     ![Set Environment Variable](Env.png)
+    
+17. To add the environment click **Apply(1)**.
 
-16. Now, upload an image inside the blob container and **it will trigger the Blob name and size**. 
+
+    
+16. Now, upload an image inside the blob container and **it will trigger the Blob name and size (1)**. 
  
     ![Final](Final.png)
 
