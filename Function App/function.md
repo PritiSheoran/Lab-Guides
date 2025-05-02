@@ -93,16 +93,19 @@ Azure Functions is a serverless solution that allows you to write less code, mai
  
 10. If you don't get the trigger in logs, then navigate to integration inside the function and check the **storage account connection**.
 
+    ![Hosting](Integration.png)
+
 11. If not connected, we need to set the environmnet variables.
-12. Navigate to the **storage account** > **security+ networking (1)** > **Access Keys (2)**, under Key1, copy the **connection string(3)**.
+    
+13. Navigate to the **storage account** > **security+ networking (1)** > **Access Keys (2)**, under Key1, copy the **connection string(3)**.
 
     ![Access](Access.png)
 
-13. On the function app page, select **Environment Variable (1)** and click **+ Add (2)** to add the environment variable. 
+14. On the function app page, select **Environment Variable (1)** and click **+ Add (2)** to add the environment variable. 
 
     ![Navigate to Environment](Variable.png)  
 
-14. Create an environment varable by adding the following information.
+15. Create an environment varable by adding the following information.
     
     | **Settings**                    | **Values**                                                            |
     |---------------------------------|-----------------------------------------------------------------------|
@@ -111,7 +114,7 @@ Azure Functions is a serverless solution that allows you to write less code, mai
    
     ![Set Environment Variable](Env.png)
 
-15. Now, upload an image inside the blob container and **it will trigger the Blob name and size**. 
+16. Now, upload an image inside the blob container and **it will trigger the Blob name and size**. 
  
     ![Final](Final.png)
 
