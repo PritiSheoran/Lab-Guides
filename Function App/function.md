@@ -17,11 +17,11 @@ Azure Functions is a serverless solution that allows you to write less code, mai
 
    ![Function App](Search.png)
 
-2. On App Service page, click on **+Create(1)**, choose **Function App(2)** from the dropdown menu.
+2. On App Service page, click on **+Create(1)**.
 
    ![+Create](Create.png)
 
-3. Choose Hosting plan as **Consumption(1)** then click on **Select(2)**.
+3. On create function app page, choose Hosting plan as **Consumption(1)** then click on **Select(2)**.
 
    ![Hosting Plan](Hosting.png)
 
@@ -65,7 +65,7 @@ Azure Functions is a serverless solution that allows you to write less code, mai
    
 ## Task 2: Create a Blob triggered function 
 
-1. On the **Overview(1)**, click **Create function(2)**.
+1. On the **Overview(1)** page of newly created function app, click **Create function(2)**.
 
    ![Function](Function.png)
    
@@ -73,7 +73,7 @@ Azure Functions is a serverless solution that allows you to write less code, mai
 
    ![Function](Function1.png)
    
-5. On the Template details tab and click on **Create(4)**.
+5. On the Template details tab, add the following information and click on **Create(4)**.
 
    | **Settings**                    | **Values**                                                            |
    |---------------------------------|-----------------------------------------------------------------------|
