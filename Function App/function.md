@@ -81,9 +81,9 @@ Azure Functions is a serverless solution that allows you to write less code, mai
    | Path                            | Provide your container name **images(2)**                             |
    | Name                            | Select storage account name from New **pritisheoran18ab32 (3)**       |
 
-   ![Function](Function3.png)
+   ![Function](Function4.png)
     
-7. Navigate to Storage account, select **Upload (1)**, **browse for files (2)** and enter **Upload**.
+7. Navigate to Storage account, select **Upload (1)**, **browse for files (2)** and enter **Upload (3)**.
 
    ![Upload](Upload.png)
   
@@ -101,7 +101,7 @@ Azure Functions is a serverless solution that allows you to write less code, mai
 
     ![Access](Access.png)
 
-14. On the function app page, select **Environment Variable (1)** and click **+ Add (2)** to add the environment variable. 
+14. On the function app page, select **Environment Variable** and click **+ Add (2)** to add the environment variable. 
 
     ![Navigate to Environment](Variable2.png)  
 
@@ -109,7 +109,7 @@ Azure Functions is a serverless solution that allows you to write less code, mai
     
     | **Settings**                    | **Values**                                                            |
     |---------------------------------|-----------------------------------------------------------------------|
-    | Name                            |  **add the storage account name**                                     |
+    | Name                            |  **add the storage account name (1)**                                 |
     | Value                           |  **Paste the copied connection string (2)** fron step (12)            |
    
     ![Set Environment Variable](Env.png)
