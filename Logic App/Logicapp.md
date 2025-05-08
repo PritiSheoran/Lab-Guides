@@ -8,7 +8,7 @@ Azure Logic Apps is a cloud platform where you can create and run automated work
 ## Task to be Done
 
 1. Create a Logic App
-1. Create a Workflow
+1. Create Workflow
 3. Run Workflow
 
 ## Task 1 : Create a Logic App
@@ -30,7 +30,24 @@ Azure Logic Apps is a cloud platform where you can create and run automated work
 
 5. Once the validation pass, click on **Create (1)**.
 6. Wait a few minutes while Azure sets up your Logic App. Click on the **Go to resource(1)** option.
-7. On the **Overview(1)** page of newly created function app, click **Create function(2)**.
+
+
+## Task 2: Create Workflow 
+
+8. Now, on newly created logic app's page, under workflows select **Workflows (1)**, select **+ Add (2)** to create a new workflow, enter the following information and click **Create (5)**.
+
+   | **Settings**                    | **Values**                                                                                |
+   |---------------------------------|-------------------------------------------------------------------------------------------|
+   | Workflow Name                   | **Provide a unique name** for e.g. **First-logic (3)**                                    |
+   | State type                      | Select **Stateless (4)**                                                                  |
+
+   
+8.  Inside the **First-logic** workflow page, click on **Add a Trigger (2)** and select **Request (3)**.
+9.  On **add trigger** page, select the request type as **When a HTTP request is received (1)**.
+10.  Select method as **POST (1)** from the dropdown menu.
+11.  
+12.  
+   
    
 
 
