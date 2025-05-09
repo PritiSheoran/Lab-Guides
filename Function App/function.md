@@ -101,7 +101,7 @@ Azure Functions is a serverless solution that allows you to write less code, mai
 
     ![Access](Access.png)
 
-14. On the function app page, select **Environment Variable** and click **+ Add (2)** to add the environment variable. 
+14. On the function app page, select **Environment Variable** and click **+ Add (1)** to add the environment variable. 
 
     ![Navigate to Environment](Variable2.png)  
 
