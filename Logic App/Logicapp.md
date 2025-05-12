@@ -71,8 +71,19 @@ Azure Logic Apps is a cloud platform where you can create and run automated work
 
    ![Request](Request.png)
     
-5. Select method as **GET (1)** from the dropdown menu.
-  
+5. **When a HTTP request is received**, select method as **GET (1)** from the dropdown menu and leave other settings as default.
+6. Click on **(+) (1)** below the trigger, **Add action(2)** then, in search bar search and select **Get Blob MetaData (3)**.
+7. On **Create Connection** page, add the following information and click **  Create new (5)**.
+
+   | **Settings**                     | **Values**                                                                                |
+   |----------------------------------|-------------------------------------------------------------------------------------------|
+   | Connection Name                  | Give Storage Account Name e.g. **pritisheoran189898 (1)** as connectiom name              |
+   | Authentication Type              | Select **Access key (2)** from dropdown menu                                              |
+   | Blob endpoint                    | Provide **blob endpoint (3)**                                                             |
+   | Azure Storage Account Access Key | Provide **Storage Account Access Key (4)**                                                |
+
+8. A new page **Get Blob Metadata (V)** page, provide **Blob Endpoint (1)** from the drop down menu and **Blob path(2)**.
+9. 
    
    
 
