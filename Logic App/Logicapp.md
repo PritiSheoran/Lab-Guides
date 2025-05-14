@@ -48,7 +48,7 @@ Azure Logic Apps is a cloud platform where you can create and run automated work
 
    ![Create Logic App](Create1.png)
    
-10. Wait a few minutes while Azure sets up your Logic App. Click on the **Go to resource(1)** option.
+10. Wait a few minutes while Azure sets up your Logic App. Click on the **Go to resource** option.
     
     ![Go To Resources Page](GoToResource.png)
 
@@ -63,7 +63,7 @@ Azure Logic Apps is a cloud platform where you can create and run automated work
 
    ![Create a Workflow](AddWorkflow.png)
   
-2. Inside the **First-logic** workflow page, click on **Add a Trigger (2)** and select **Request (3)**.
+2. On the **First-logic** workflow page, go to **Designer (1)** click on **Add a Trigger (2)** and select **Request (3)**.
 
    ![Add a Trigger](Trigger.png)
 
@@ -116,12 +116,40 @@ Azure Logic Apps is a cloud platform where you can create and run automated work
 
 
 
-4. Click on **(+) (1)** below the **Check whether blob exists**, **Add action**, in search bar search and then, select **Condition (1)**.
+4. Click on **(+) (1)** below the **Check whether blob exists**, **Add an action**, in search bar search and then, select **Condition (1)**.
 
 
    
-6. On **Condition** page, select a parameter **Response from check blob exists action Is Blob Exists**, keep the value of the parameter as **True**
-7. 
+6. On **Condition** page, select a parameter **Response from check blob exists action Is Blob Exists**, keep the value of the parameter as **True**.
+
+
+   
+8. Click on **(+) (1)** below the **True** condition, click on **Add an action**,in search bar search **Response** and then, select **Response (1)**.
+   
+1. Repeat **step 8** for False condition as well.
+1. Under True condition click on **(+) (1)** below the **Response** action, click on **Add an action**,in search bar search **Outlook** and then, select **Send an email (v2) (1)**.
+2. FOr True condition, on **Send an email (V2)** page, in parameters add the following information.
+   
+   | **Settings** | **Values**                                                                                |
+   |--------------|-------------------------------------------------------------------------------------------|
+   | TO           | provide a valid email e.g. **23mcc20042@cuchd.in (1)**                                    |
+   | Subject      | Provide a subject e.g. **Check whether blob exists(2)**                                   |
+   | Body         | Provide **Blob exists in your storage account pritisheoran189898 (3)**                    |
+   
+4. Repeat **step 8** for False condition as well.
+5. FOr False conditon, on **Send an email (V2)** page, in parameters add the following information.
+   
+   | **Settings** | **Values**                                                                                |
+   |--------------|-------------------------------------------------------------------------------------------|
+   | TO           | provide a valid email e.g. **23mcc20042@cuchd.in (1)**                                    |
+   | Subject      | Provide a subject e.g. **Check whether blob exists(2)**                                   |
+   | Body         | Provide **Blob does not exist in your storage account pritisheoran189898 (3)**            |
+   
+7. Now your workflow is ready. Save and run it.
+   
+## Task 3: Run Workflow      
+   
+
    
    
 
