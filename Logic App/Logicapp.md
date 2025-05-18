@@ -94,19 +94,19 @@ Azure Logic Apps is a cloud platform where you can create and run automated work
    
 1. Navigate to your storage account named **pritisheoran189898**, under **Settings** go to **Endpoints** and copy the **Blob service** endpoint in notepad.
 
-  ![Storage Account Endpoint](SA.png)
+   ![Storage Account Endpoint](SA.png)
     
 1. Under security+networking got to **Access keys**  and copy the **Key** from key1 in notepad where you copied blob service endpoint.
 
-  ![Storage Account Access key](SA1.png)
+   ![Storage Account Access key](SA1.png)
 
 9. On **Get Blob Metadata (V2)** page, provide **Blob Endpoint (1)** from the drop down menu and **Blob path (2)**.
 
-    
+   ![Get Blob MetaData (V2)](GetMetaData2.png)    
    
 1. Click on **(+) (1)** below the  **Get Blob Metadata (V2)**, **Add action(2)**, in search bar search and then, select **Check Whether Blob Exists**.
 
-
+   ![Check Whether Blob Exists](BlobExists.png) 
 
 1. On **Create Connection** page, add the following information from already existing storage account and click **Create new (4)**.
 
@@ -114,33 +114,47 @@ Azure Logic Apps is a cloud platform where you can create and run automated work
    |-----------------------------------|-------------------------------------------------------------------------------------------|
    | Connection Name                   | Give Storage Account Name as connectiom name here, use **pritisheoran189898 (1)**         |
    | Authentication Type               | Select **Storage account connection string(2)** from dropdown menu                        |
-   | Storage Account Connection String | Provide **Storage Account Connection String (4)**                                         |
+   | Storage Account Connection String | Provide **Storage Account Connection String (3)**                                         |
+
+   ![Create Connection](BlobExist1.png) 
 
    Note: if you don't know how to get connection string, avigate to your storage account named **pritisheoran189898**, under security+networking select **Access keys** and from access keys page copy the **connection string** under key1.
+
+   ![Connection String](ConnectionString.png)
    
 3. On **Check whether blob exists** page, provide **Container name** as **images (1)** and **Blob Name** as **download.jpg (2)**.
 
-
+   ![Check whether blob exists](BlobExists2.png)
 
 4. Click on **(+) (1)** below the **Check whether blob exists**, **Add an action**, in search bar search and then, select **Condition (1)**.
 
-
+   ![Add Action Condition](Condition.png)
    
 6. On **Condition** page, select a parameter **Response from check blob exists action Is Blob Exists**, keep the value of the parameter as **True**.
 
-
+   ![Set parameter](Parameter.png)
    
 8. Click on **(+) (1)** below the **True** condition, click on **Add an action**,in search bar search **Response** and then, select **Response (1)**.
+
+   ![True Response](TrueResponse.png)
    
 1. Repeat **step 8** for False condition as well.
+
+   ![False Response](FalseResponse.png)
+   
 1. Under True condition click on **(+) (1)** below the **Response** action, click on **Add an action**,in search bar search **Outlook** and then, select **Send an email (v2) (1)**.
-2. FOr True condition, on **Send an email (V2)** page, in parameters add the following information.
+
+   ![True send email](Email.png)
+   
+3. FOr True condition, on **Send an email (V2)** page, in parameters add the following information.
    
    | **Settings** | **Values**                                                                                |
    |--------------|-------------------------------------------------------------------------------------------|
    | TO           | provide a valid email e.g. **23mcc20042@cuchd.in (1)**                                    |
    | Subject      | Provide a subject e.g. **Check whether blob exists(2)**                                   |
    | Body         | Provide **Blob exists in your storage account pritisheoran189898 (3)**                    |
+
+   ![True send email](TrueSendEmail.png)
    
 4. Repeat **step 8** for False condition as well.
 5. FOr False conditon, on **Send an email (V2)** page, in parameters add the following information.
