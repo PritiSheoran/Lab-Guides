@@ -167,7 +167,7 @@ Azure Logic Apps is a cloud platform where you can create and run automated work
    
 7. Now your workflow is ready. Save and run it.
    
-## Task 3: Run Workflow      
+  
    
 
    
