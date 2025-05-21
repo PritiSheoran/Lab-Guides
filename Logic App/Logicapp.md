@@ -47,7 +47,7 @@ Azure Logic Apps is a cloud platform where you can create and run automated work
 
    ![Create Logic App](Create1.png)
    
-10. Wait a few minutes while Azure sets up your Logic App. Click on the **Go to resource** option.
+10. Wait for few minutes while Azure sets up your Logic App. Click on the **Go to resource** option.
     
     ![Go To Resources Page](GoToResource.png)
 
@@ -70,11 +70,11 @@ Azure Logic Apps is a cloud platform where you can create and run automated work
 
    ![Request](Request.png)
     
-5. **When a HTTP request is received**, select method as **GET (1)** from the dropdown menu and leave other settings as default.
+5. On **HTTP request is received** page, select method as **Default (Allow All Methods) (1)** from the dropdown menu and leave other settings as default.
 
    ![Get Method](Method.png)
    
-7. Click on **(+) (1)** below the trigger, **Add action(2)** , in search bar search and select **Get Blob MetaData (3)**.
+7. Click on **(+) (1)** below the trigger, **Add action** , in search bar search for **Get Blob MetaData (2)** and select **Get Blob MetaData (3)**.
 
    ![Add action Get Blob MetaData](Add1.png)
 
@@ -89,21 +89,25 @@ Azure Logic Apps is a cloud platform where you can create and run automated work
 
    ![Create connection](BlobMetaData.png)
 
-   Note: if you don't know how to get the above mentioned details then follow the point 9 and 10.
+   Note: if you don't know how to get the above mentioned details then follow the point 7, 8 and 9.
    
-1. Navigate to your storage account named **pritisheoran189898**, under **Settings** go to **Endpoints** and copy the **Blob service** endpoint in notepad.
+1. Navigate to your storage account named **pritisheoran189898**.
+
+3. In search bar above overview, search for **Endpoint (1)**, under **Settings** go to **Endpoints(2)** and copy the **Blob service (3)** endpoint URL in notepad.
 
    ![Storage Account Endpoint](SA.png)
     
-1. Under security+networking got to **Access keys**  and copy the **Key** from key1 in notepad where you copied blob service endpoint.
+1. Under security+networking got to **Access keys(1)**  and copy the **Key(2)** from key1 in notepad where you copied blob service endpoint.
 
    ![Storage Account Access key](SA1.png)
 
+   Note: Use these URLs copied in notepad in point 6.
+   
 9. On **Get Blob Metadata (V2)** page, provide **Blob Endpoint (1)** from the drop down menu and **Blob path (2)**.
 
    ![Get Blob MetaData (V2)](GetMetaData2.png)    
    
-1. Click on **(+) (1)** below the  **Get Blob Metadata (V2)**, **Add action(2)**, in search bar search and then, select **Check Whether Blob Exists**.
+1. Click on **(+) (1)** below the  **Get Blob Metadata (V2)**, **Add action**, in search bar search for **Check Whether Blob Exists (2)** and then, select **Check Whether Blob Exists (3)**.
 
    ![Check Whether Blob Exists](BlobExists.png) 
 
@@ -117,7 +121,7 @@ Azure Logic Apps is a cloud platform where you can create and run automated work
 
    ![Create Connection](BlobExist1.png) 
 
-   Note: if you don't know how to get connection string, avigate to your storage account named **pritisheoran189898**, under security+networking select **Access keys** and from access keys page copy the **connection string** under key1.
+   Note: if you don't know how to get connection string, avigate to your storage account named **pritisheoran189898**, under security+networking select **Access keys (1)** and from access keys page copy the **connection string (2)** under key1.
 
    ![Connection String](ConnectionString.png)
    
@@ -125,23 +129,23 @@ Azure Logic Apps is a cloud platform where you can create and run automated work
 
    ![Check whether blob exists](BlobExists2.png)
 
-4. Click on **(+) (1)** below the **Check whether blob exists**, **Add an action**, in search bar search and then, select **Condition (1)**.
+4. Click on **(+) (1)** below the **Check whether blob exists**, **Add an action**, in search bar search for **Condition (2)** and then, select **Condition (3)**.
 
    ![Add Action Condition](Condition.png)
    
-6. On **Condition** page, select a parameter **Response from check blob exists action Is Blob Exists**, keep the value of the parameter as **True**.
+6. On **Condition** page, select a parameter **Response from check blob exists action Is Blob Exists (2)**, whose value **is equal to(3)** **true(4)**.
 
    ![Set parameter](Parameter.png)
    
-8. Click on **(+) (1)** below the **True** condition, click on **Add an action**,in search bar search **Response** and then, select **Response (1)**.
+8. Click on **(+) (1)** below the **True** condition, click on **Add an action**, in search bar search **Response** and then, select **Response (2)**.
 
    ![True Response](TrueResponse.png)
    
-1. Repeat **step 8** for False condition as well.
+1. Similarly, click on **(+) (1)** below the **False** condition, click on **Add an action**, in search bar search **Response** and then, select **Response (2)**.
 
    ![False Response](FalseResponse.png)
    
-1. Under True condition click on **(+) (1)** below the **Response** action, click on **Add an action**,in search bar search **Outlook** and then, select **Send an email (v2) (1)**.
+1. Under True condition click on **(+) (1)** below the **Response** action, click on **Add an action**, in search bar search **Outlook (2)** and then, select **Send an email (V2) (3)**.
 
    ![True send email](Email.png)
    
@@ -155,16 +159,25 @@ Azure Logic Apps is a cloud platform where you can create and run automated work
 
    ![True send email](TrueSendEmail.png)
    
-4. Repeat **step 8** for False condition as well.
-5. FOr False conditon, on **Send an email (V2)** page, in parameters add the following information.
+4. SImilarly, under False condition click on **(+) (1)** below the **Response** action, click on **Add an action**, in search bar search **Outlook (2)** and then, select **Send an email (V2) (3)**.
+
+   ![False send email](FalseEmail.png)
+   
+6. FOr False conditon, on **Send an email (V2)** page, in parameters add the following information.
    
    | **Settings** | **Values**                                                                                |
    |--------------|-------------------------------------------------------------------------------------------|
    | TO           | provide a valid email e.g. **23mcc20042@cuchd.in (1)**                                    |
    | Subject      | Provide a subject e.g. **Check whether blob exists(2)**                                   |
    | Body         | Provide **Blob does not exist in your storage account pritisheoran189898 (3)**            |
+
+   ![False send email](FalseSendEmail.png)
    
-7. Now your workflow is ready. Save and run it.
+8. Now your workflow is ready. **Save (1)** and **Run (2)** it.
+
+   ![Workflow](Architecture1.png)
+
+10. 
    
   
    
