@@ -182,7 +182,7 @@ Azure Logic Apps is a cloud platform where you can create and run automated work
 
    ![Workflow](Architecture1.png)
 
-## Task 1 : Output of Workflow
+## Task 3 : Output of Workflow
    
 1. As an output you will receive an email on your provided email, here we have used 23mcc20042@cuchd.in to get an email whether blob exits or not.
    
