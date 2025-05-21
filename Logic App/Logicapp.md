@@ -8,7 +8,8 @@ Azure Logic Apps is a cloud platform where you can create and run automated work
 ## Task to be Done
 
 1. Create a Logic App
-1. Create and Run Workflow 
+1. Create and Run Workflow
+2. Output of Workflow
 
 ## Task 1 : Create a Logic App
 
@@ -89,7 +90,7 @@ Azure Logic Apps is a cloud platform where you can create and run automated work
 
    ![Create connection](BlobMetaData.png)
 
-   Note: if you don't know how to get the above mentioned details then follow the point 7, 8 and 9.
+   *Note: if you don't know how to get the above mentioned details then follow the point 7, 8 and 9.*
    
 1. Navigate to your storage account named **pritisheoran189898**.
 
@@ -101,7 +102,7 @@ Azure Logic Apps is a cloud platform where you can create and run automated work
 
    ![Storage Account Access key](SA1.png)
 
-   Note: Use these URLs copied in notepad in point 6.
+   *Note: Use these URLs copied in notepad in point 6*.
    
 9. On **Get Blob Metadata (V2)** page, provide **Blob Endpoint (1)** from the drop down menu and **Blob path (2)**.
 
@@ -121,7 +122,7 @@ Azure Logic Apps is a cloud platform where you can create and run automated work
 
    ![Create Connection](BlobExist1.png) 
 
-   Note: if you don't know how to get connection string, avigate to your storage account named **pritisheoran189898**, under security+networking select **Access keys (1)** and from access keys page copy the **connection string (2)** under key1.
+   *Note: if you don't know how to get connection string, avigate to your storage account named **pritisheoran189898**, under security+networking select **Access keys (1)** and from access keys page copy the **connection string (2)** under key1*.
 
    ![Connection String](ConnectionString.png)
    
@@ -129,25 +130,29 @@ Azure Logic Apps is a cloud platform where you can create and run automated work
 
    ![Check whether blob exists](BlobExists2.png)
 
-4. Click on **(+) (1)** below the **Check whether blob exists**, **Add an action**, in search bar search for **Condition (2)** and then, select **Condition (3)**.
+4. Click on **(+) (1)** below the **Check whether blob exists**, **Add an action**, in search bar search for **Condition** and then, select **Condition (2)**.
 
    ![Add Action Condition](Condition.png)
    
 6. On **Condition** page, select a parameter **Response from check blob exists action Is Blob Exists (2)**, whose value **is equal to(3)** **true(4)**.
-
+   
    ![Set parameter](Parameter.png)
    
 8. Click on **(+) (1)** below the **True** condition, click on **Add an action**, in search bar search **Response** and then, select **Response (2)**.
 
    ![True Response](TrueResponse.png)
+
+8. On **Response** page, give content in **Body** **e.g. Blob Exists** which will be shown on response page after running the workflow.
    
-1. Similarly, click on **(+) (1)** below the **False** condition, click on **Add an action**, in search bar search **Response** and then, select **Response (2)**.
+1. Click on **(+) (1)** below the **False** condition, click on **Add an action**, in search bar search **Response** and then, select **Response (2)**.
 
    ![False Response](FalseResponse.png)
-   
+
+2. On **Response** page, give content in **Body** **e.g. Blob Doesn't Exist** which will be shown on response page after running the workflow.
+      
 1. Under True condition click on **(+) (1)** below the **Response** action, click on **Add an action**, in search bar search **Outlook (2)** and then, select **Send an email (V2) (3)**.
 
-   ![True send email](Email.png)
+   ![True send email](FalseEmail.png)
    
 3. FOr True condition, on **Send an email (V2)** page, in parameters add the following information.
    
@@ -176,6 +181,22 @@ Azure Logic Apps is a cloud platform where you can create and run automated work
 8. Now your workflow is ready. **Save (1)** and **Run (2)** it.
 
    ![Workflow](Architecture1.png)
+
+## Task 1 : Output of Workflow
+   
+1. As an output you will receive an email on your provided email, here we have used 23mcc20042@cuchd.in to get an email whether blob exits or not.
+   
+   ![Email Output](Output.png)
+   
+3. To get a response output, navigate to trigger **When a HTTP request is received (1)** and copy the **HTTP URL (2)**.
+   
+   ![Email Output](ResponseOutput1.png)
+  
+5. Paste the copied **HTTP URL** in the browser then, it will give the response in output.
+
+   ![Email Output](ResponseOutput.png)
+   
+   
 
    
   
