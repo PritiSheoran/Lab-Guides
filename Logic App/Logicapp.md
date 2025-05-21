@@ -8,8 +8,7 @@ Azure Logic Apps is a cloud platform where you can create and run automated work
 ## Task to be Done
 
 1. Create a Logic App
-1. Create Workflow
-3. Run Workflow
+1. Create and Run Workflow 
 
 ## Task 1 : Create a Logic App
 
@@ -52,7 +51,7 @@ Azure Logic Apps is a cloud platform where you can create and run automated work
     
     ![Go To Resources Page](GoToResource.png)
 
-## Task 2: Create Workflow 
+## Task 2: Create and Run Workflow 
 
 1. Now, on newly created logic app's page, under workflows select **Workflows (1)**, select **+ Add (2)** to create a new workflow, enter the following information and click **Create (5)**.
 
