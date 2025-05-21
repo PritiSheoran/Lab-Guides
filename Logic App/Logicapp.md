@@ -166,7 +166,7 @@ Azure Logic Apps is a cloud platform where you can create and run automated work
    
 4. SImilarly, under False condition click on **(+) (1)** below the **Response** action, click on **Add an action**, in search bar search **Outlook (2)** and then, select **Send an email (V2) (3)**.
 
-   ![False send email](FalseResponse.png)
+   ![False send email](FalseEmail.png)
    
 6. FOr False conditon, on **Send an email (V2)** page, in parameters add the following information.
    
